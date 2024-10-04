@@ -76,34 +76,53 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               body: `
-              <h1 align="center">🎉 La preview est prête 🎉</h1>
-            
-              ![iOS](https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/ios_light.png#gh-light-mode-only)
-              ![iOS](https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/ios_dark.png#gh-dark-mode-only)
-            
-              <img
-              src="http://api.qrserver.com/v1/create-qr-code/?data=exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=ios&size=150x150&margin=5"
-              align="left"
-              />
-              Pour exécuter cette preview sur ton iPhone, tu auras besoin de l'application ExpoGo.
-              Une fois installée, scanne ce QR code à l'aide de l'appareil photo ou entre cette url dans Expo :
-              \`exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=ios\`
-            
-              <br><br><br>
-              <hr>
-            
-              ![Android](https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/android_light.png#gh-light-mode-only)
-              ![Android](https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/android_dark.png#gh-dark-mode-only)
-            
-              <img
-              src="http://api.qrserver.com/v1/create-qr-code/?data=exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=android&size=150x150&margin=5"
-              align="left"
-              />
-              Pour exécuter cette preview sur ton téléphone, tu auras besoin de l'application ExpoGo.
-              Télécharge-la depuis le Google PlayStore, puis une fois installée, scanne ce QR code à l'aide du scanneur de QR code
-              de ton mobile ou entre cette url dans Expo :
-              \`exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=android\`
-            
-              <br>
+              <h1 align="center">🎉 La preview est prête ! 🎉</h1>
+              
+              <table>
+                <tr>
+                  <th>iOS</th>
+                  <th>Android</th>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/ios_light.png#gh-light-mode-only" alt="iOS Light" width="200"/>
+                    <img src="https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/ios_dark.png#gh-dark-mode-only" alt="iOS Dark" width="200"/>
+                  </td>
+                  <td>
+                    <img src="https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/android_light.png#gh-light-mode-only" alt="Android Light" width="200"/>
+                    <img src="https://raw.githubusercontent.com/PapillonApp/chat-themes/refs/heads/main/.github/assets/android_dark.png#gh-dark-mode-only" alt="Android Dark" width="200"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="http://api.qrserver.com/v1/create-qr-code/?data=exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=ios&size=200x200&margin=5" alt="iOS QR Code"/>
+                  </td>
+                  <td>
+                    <img src="http://api.qrserver.com/v1/create-qr-code/?data=exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=android&size=200x200&margin=5" alt="Android QR Code"/>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <p>Pour iOS :</p>
+                    <ol>
+                      <li>Installez l'application <a href="https://apps.apple.com/us/app/expo-go/id982107779">ExpoGo</a> sur votre iPhone</li>
+                      <li>Scannez le QR code ci-dessus avec l'appareil photo</li>
+                      <li>Ou entrez cette URL dans ExpoGo :</li>
+                    </ol>
+                    <code>exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=ios</code>
+                  </td>
+                  <td>
+                    <p>Pour Android :</p>
+                    <ol>
+                      <li>Installez l'application <a href="https://play.google.com/store/apps/details?id=host.exp.exponent">ExpoGo</a> depuis le Google Play Store</li>
+                      <li>Ouvrez ExpoGo et scannez le QR code ci-dessus</li>
+                      <li>Ou entrez cette URL dans ExpoGo :</li>
+                    </ol>
+                    <code>exp://-- !!! EXPO SERVER !!! --/${{ github.event.pull_request.number }}?platform=android</code>
+                  </td>
+                </tr>
+              </table>
+              
+              <p align="center">N'hésitez pas à tester la preview et à laisser vos commentaires !</p>
               `
             });
